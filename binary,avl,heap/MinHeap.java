@@ -11,9 +11,17 @@ public class MinHeap {
         this.heap = new int[capacity + 1];
     }
 
-    private int parent(int index) { return index / 2; }
-    private int leftChild(int index) { return 2 * index; }
-    private int rightChild(int index) { return 2 * index + 1; }
+    private int parent(int index) {
+        return index / 2;
+    }
+
+    private int leftChild(int index) {
+        return 2 * index;
+    }
+
+    private int rightChild(int index) {
+        return 2 * index + 1;
+    }
 
     public void insert(int value) {
         if (size >= capacity) {
