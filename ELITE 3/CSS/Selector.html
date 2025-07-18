@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector Examples</title>
+    <style>
+        /* ^ Starts with selector (attribute) */
+        a[href^="https"] {
+            color: green;
+        }
+        /* ~ General sibling selector */
+        h2 ~ p {
+            color: orange;
+        }
+        /* > Child selector */
+        ul > li {
+            font-weight: bold;
+        }
+        /* < No direct CSS selector, but :first-child and :last-child can be used */
+        ul li:last-child {
+            color: red;
+        }
+        /* * Universal selector */
+        * {
+            font-family: Arial, sans-serif;
+        }
+        /* [attribute] Attribute selector */
+        input[type="text"] {
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Sibling Heading</h2>
+    <p>This paragraph is a general sibling of h2 (orange).</p>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Last item (red)</li>
+    </ul>
+    <a href="https://example.com">HTTPS Link (green)</a>
+    <a href="http://example.com">HTTP Link (default)</a>
+    <br><br>
+    <input type="text" placeholder="Text input (blue border)">
+</body>
+</html>

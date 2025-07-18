@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements Grid</title>
+    <style>
+        .achi {
+            display: grid;
+            background-color: rgb(251, 7, 117);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            color: aliceblue;
+            padding: 5% 10%;
+        }
+        .achie1 {
+            background-color: blue;
+            padding: 10%;
+            border-radius: 10%;
+            box-shadow: 0 7px 20px rgba(246, 243, 243, 0.2);
+            transition: transform 0.2s;
+        }
+        .achie1:hover {
+            transform: translateY(-10px) scale(1.03);
+             background-color: aqua;
+             color: black;
+        }
+        .achie1 h4:hover {
+            transform: translateY(-10px) scale(1.03);
+             background-color: aqua;
+             color: black;
+        }
+        .achie1 h4 {
+            color: rgb(8, 9, 9);
+            font-size: x-large;
+            margin-top: 0;
+        }
+        .achie1::first-letter {
+            color: rgb(250, 250, 250);
+           
+        }
+        @media (max-width: 800px) {
+            .achi {
+                grid-template-columns: 1fr;
+                padding: 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <center><h1 style="background-color: aqua;">Achievements</h1></center>
+    <div class="achi">
+        <div class="achie1">
+            <h4>Top Performance</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta culpa sit odio quibusdam, mollitia quos ab molestias assumenda, dolores aperiam, voluptatem quis ut earum delectus suscipit ipsum deleniti ratione sequi!</p>
+        </div>
+        <div class="achie1">
+            <h4>Top In studies</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur iure saepe labore molestias id sapiente facilis! Nobis et excepturi id beatae quod numquam vero, aliquam fugiat. Eveniet beatae unde necessitatibus.</p>
+        </div>
+        <div class="achie1">
+            <h4>Top In placements</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, harum soluta culpa veniam pariatur voluptatem! Aspernatur accusantium quas saepe architecto atque omnis laboriosam qui possimus commodi ratione et, delectus suscipit!</p>
+        </div>
+    </div>
+</body>
+</html>
