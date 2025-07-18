@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <style>
+        body{
+            background-color:antiquewhite;
+            align-items: center;
+            justify-content: center;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            border-color: black;
+
+        }
+        thead{
+            background-color: rgb(30, 249, 234);
+            padding: 10px;
+            
+        }
+        tbody{
+            background-color: rgb(253, 246, 57);
+        }
+        th, td {
+        padding: 25px 20px;
+        font-size: 1.1em;
+        text-align: center;
+        .day{
+            background-color: aliceblue;
+        }
+    }
+    </style>
+    <center><h1>Time Table</h1></center>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>period 1<br>9.30a.m To 10.45a.m</th>
+                <th>period 2<br>11.00a.m To 12.45p.m</th>
+                <th>12.45p.m To 1.30p.m</th>
+                <th>period 3<br>1.30p.m To 3.00p.m</th>
+                <th>period 4<br>3.30p.m To 4.40p.m</th>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td class="day">Mon</td>
+                <td>Test 1</td>
+                <td>Maths</td>
+                <td rowspan="6">Lunch<br>Break</td>
+                <td>English</td>
+                <td>Science</td>
+            </tr>
+            <tr>
+                <td class="day">Tues</td>
+                <td colspan="2">Tamil</td>
+                <td>Social</td>
+                <td>Maths</td>
+            </tr>
+            <tr>
+                <td class="day">Wed</td>
+                <td>Maths</td>
+                <td>Science</td>
+                <td>Tam</td>
+                <td>Social</td>
+            </tr>
+            
+            <tr>
+                <td class="day">Thurs</td>
+                <td>Maths</td>
+                <td>Social</td>
+                <td>Tamil</td>
+                <td>English</td>
+            </tr>
+            <tr>
+                <td class="day">Friday</td>
+                <td>Science</td>
+                <td>English</td>
+                <td colspan="2">PET</td>
+            </tr>
+            <tr>
+                <td class="day">Sat</td>
+                <td>Social</td>
+                <td>Maths</td>
+                <td>English</td>
+                <td>Science</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
