@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="intro.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4 fs-2">Registration Form</h1>
+        <form class="needs-validation">
+            <div class="row">
+                <div class="col">
+                    <label class="form-label fs-5">First Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" placeholder="Enter The First Name" required>
+                </div>
+                <div class="col">
+                    <label class="form-label fs-5">Last Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" placeholder="Enter The Last Name" required>
+                </div>
+            </div>
+
+            <div class="col mt-3">
+                <label class="form-label fs-5">Email <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" placeholder="Enter The Email" required>
+            </div>
+
+            <div class="col mt-3">
+                <label class="form-label fs-5">Password <span class="text-danger">*</span></label>
+                <input type="password" class="form-control" placeholder="Enter The Password" required>
+                <small class="text-muted">Must be 8+ characters long.</small>
+            </div>
+
+            <div class="col mt-3">
+                <label class="form-label fs-5">Country <span class="text-danger">*</span></label>
+                <select class="form-select text-secondary" required>
+                    <option value="" disabled selected>Choose...</option>
+                    <option value="India">India</option>
+                    <option value="United States">United States</option>
+                </select>
+            </div>
+
+            <div class="col mt-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="check" required>
+                    <label class="form-check-label fs-5" for="check">Subscription for payment</label>
+                </div>
+            </div>
+
+            <div class="col mt-3">
+                <p class="fs-5">Preferred Contact <span class="text-danger">*</span></p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contact" id="contactPhone" required>
+                    <label class="form-check-label" for="contactPhone">Phone</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contact" id="contactMobile" required>
+                    <label class="form-check-label" for="contactMobile">Mobile</label>
+                </div>
+            </div>
+
+            <div class="col mt-3">
+                <label class="form-label fs-5">Bio <span class="text-danger">*</span></label>
+                <textarea name="Bio" class="form-control" rows="4" placeholder="Write something about yourself..." required></textarea>
+            </div>
+
+            <div class="col mt-4">
+                <input type="submit" class="btn btn-primary fs-3" >
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
