@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .light {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #ddd;
+            padding: 20px;
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.3s ease;
+            
+        }
+        .on {
+            box-shadow: 0 0 10px white;
+            
+            transform: scale(1.2);
+        }
+        .container {
+            background-color: #fbf8f8;
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin-top: 30px;
+            max-width: fit-content;
+        }
+    </style>
+    <script defer>
+
+
+
+
+</script>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="text-light">🎄 Christmas Lights Show 🎄</h2>
+        <div class="light " style="background: red;"></div>
+        <div class="light" style="background: green;"></div>
+        <div class="light" style="background: blue;"></div>
+        <div class="light" style="background: yellow;"></div>
+        <div class="light" style="background: purple;"></div>
+        <div class="light" style="background: orange;"></div>
+        <br><br>
+        <!-- First show without bootstrap and add bootstrap buttons -->
+        <button onclick="lightShow()" class="btn btn-outline-primary">🌟 Start Light Show!</button>
+        <button onclick="turnOffAll()" class="btn btn-outline-danger" >💤 Turn Off All</button>
+    </div>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+
+     <script>
+        var lights = document.querySelectorAll('.light');
+        function lightShow() {
+           
+            
+            for(let i=0;i<lights.length;i++)
+            {
+                setTimeout(function()
+                {
+                    lights[i].classList.add("on");
+                },i*100)
+            }
+        }
+        function turnOffAll()
+        {
+            var j=0;
+            for(let i=lights.length-1;i>=0;i--)
+            {
+                setTimeout(function()
+                {
+                    lights[i].classList.remove("on");
+                },j*100)
+                j++;
+            }
+        }
+     </script>
+</body>
+</html>
