@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script src="Intro.js"></Script>
+</head>
+<body>
+    <script>
+        let name=`abcd`;
+        console.log(typeof(name));
+        console.log(`hello ${name}`);
+
+        let a=`DEEPAN`;
+        let b=`20`;
+        let c=`Violet`;
+        for(let i=0;i<5;i++)
+        {
+            console.log(`I'm ${a} and I'm ${b} years old and my favourite colour is ${c}`);
+        }
+        console.log(`I'm ${a} and I'm ${b} years old and my favourite colour is ${c}`);
+        
+
+        
+       /* let n=window.prompt();
+        if(n%2==0)
+        console.log(`Even`);
+        else
+        console.log(`Odd`);
+        */
+
+        var s=10;
+        const square=s => s*s;
+        console.log(square(s));
+        const ou=s=> s%2==0?'even':'odd';
+        console.log(ou(s));
+        
+
+
+
+       let arr=[1,2,3,5]
+       arr.forEach(i=>{console.log(i)});
+
+
+
+        const myObject={
+            val:100,
+            LogMessage:function()
+            {
+                const p=()=>{
+                    console.log(this.val);
+                }
+                p();
+            }
+        }
+        myObject.LogMessage();
+
+
+    </script>
+</body>
+</html>

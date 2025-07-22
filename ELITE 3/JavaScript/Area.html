@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function area()
+        {
+            const a=document.getElementById("a1").value;
+            const b=document.getElementById("a2").value;
+            var ar=a*b;
+            document.getElementById("area").textContent=ar;
+        }
+    </script>
+    <form action="">
+        <table>
+            <tr>
+                <td>Enter Lengh: </td>
+                <td><input type="text" id="a1" placeholder="length"></td>
+            </tr>
+            <tr>
+                <td>Enter breadth: </td>
+                <td><input type="text" id="a2" placeholder="breadth"></td>
+            </tr>
+        </table>
+    </form>
+
+   
+    
+    <button onclick="area()">calculate</button>
+    <h1 id="area"></h1>
+</body>
+</html>

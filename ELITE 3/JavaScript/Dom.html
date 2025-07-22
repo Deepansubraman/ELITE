@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DEEPAN</h1>
+    <h2>GOWTHAM</h2>
+    <button onclick="func()">click me!!</button>
+    <br><br>
+
+    <label for="Name">Enter The Name</label>
+    <input type="text" id="Name" placeholder="Enter Name:">
+    <br><br>
+
+    <h1>List Of Students</h1>
+    <ul id="list">
+       
+    </ul>
+    <button onclick="func1()">Add</button>
+
+
+    <h1 id="deep">deepan</h1>
+    Click on the word <span id="keyWord" tabindex="0"
+        style="color:blue; cursor:pointer; text-decoration:underline;">hello</span> and press any key.
+    <button id="do">Don't Click</button>
+    <script>
+        function func() {
+            var c = document.querySelector('h1');
+            var d = document.querySelector('h2');
+            var tem = c.textContent;
+            c.textContent = d.textContent;
+            d.textContent = tem;
+        }
+
+        function func1() {
+            var h = document.getElementById("Name").value.trim();
+
+            var li = document.createElement("li");
+            li.textContent = h;
+
+            var ul = document.getElementById("list");
+            ul.appendChild(li);
+            document.getElementById("Name").value = "";
+        }
+
+        document.getElementById("do").addEventListener("click", function () {
+            alert("poda somba")
+        })
+
+
+        document.getElementById("deep").addEventListener("mouseover", function () {
+            this.style.color = "yellow";
+        })
+
+
+
+        const word = document.getElementById("keyWord");
+
+        word.addEventListener("keydown", function (event) {
+            alert("You pressed: " + event.key);
+        });
+    </script>
+</body>
+
+</html>

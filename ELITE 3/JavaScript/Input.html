@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Gender Checker</title>
+</head>
+<body>
+
+  <input 
+    type="text"
+    id="deepan"
+    placeholder="Enter Your Name:" 
+    oninput="dee()" 
+  />
+  
+  <h1 id="ganap">It gives your gender</h1>
+
+  <script>
+    function dee() {
+      const d = document.getElementById("deepan").value.trim().toLowerCase();
+      const output = document.getElementById("ganap");
+
+      if (d === "") {
+        output.textContent = "It gives your gender";
+      } else if (d === "ganapathi" || d === "akash") {
+        output.textContent = "Trans gender";
+      } else {
+        output.textContent = "Male";
+      }
+    }
+  </script>
+  
+
+  <style>
+    body{
+        text-align: center;
+    }
+    #deepan{
+        margin-top: 100px;
+        background-color: rgb(255, 251, 254);
+        padding: 20px;
+        border-color: black;
+        border-radius: 20%;
+    }
+    #deepan:hover{
+        background-color: black;
+    }
+  </style>
+</body>
+</html>

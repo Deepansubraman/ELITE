@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <center>
+    <h1 class="mt-4 text-light bg-danger p-3 border border-dark border rounded-circle" style="width:fit-content;">Calculator</h1>
+    <div class="container-sm mt-4 border border-secondary p-4 rounded bg-info-subtle btn-3d" style="max-width: 350px;">
+      <input type="text" id="display" class="form-control border rounded border border-dark py-3 text-end mb-4" readonly>
+
+      <div class="row g-3 mb-3">
+        <div class="col"><button id="btn7" class="btn btn-dark rounded-circle w-100 py-3">7</button></div>
+        <div class="col"><button id="btn8" class="btn btn-dark rounded-circle w-100 py-3">8</button></div>
+        <div class="col"><button id="btn9" class="btn btn-dark rounded-circle w-100 py-3">9</button></div>
+        <div class="col"><button id="btnDivide" class="btn btn-warning rounded-circle w-100 py-3">/</button></div>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col"><button id="btn4" class="btn btn-dark rounded-circle w-100 py-3">4</button></div>
+        <div class="col"><button id="btn5" class="btn btn-dark rounded-circle w-100 py-3">5</button></div>
+        <div class="col"><button id="btn6" class="btn btn-dark rounded-circle w-100 py-3">6</button></div>
+        <div class="col"><button id="btnMultiply" class="btn btn-warning rounded-circle w-100 py-3">*</button></div>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col"><button id="btn1" class="btn btn-dark rounded-circle w-100 py-3">1</button></div>
+        <div class="col"><button id="btn2" class="btn btn-dark rounded-circle w-100 py-3">2</button></div>
+        <div class="col"><button id="btn3" class="btn btn-dark rounded-circle w-100 py-3">3</button></div>
+        <div class="col"><button id="btnSubtract" class="btn btn-warning rounded-circle w-100 py-3">-</button></div>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col"><button id="btn0" class="btn btn-dark rounded-circle w-100 py-3">0</button></div>
+        <div class="col"><button id="btnDot" class="btn btn-dark rounded-circle w-100 py-3">.</button></div>
+        <div class="col"><button id="btnEqual" class="btn btn-danger rounded-circle w-100 py-3">=</button></div>
+        <div class="col"><button id="btnAdd" class="btn btn-warning rounded-circle w-100 py-3">+</button></div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-12">
+          <button id="btnClear" class="btn btn-secondary w-100 py-2">Clear</button>
+        </div>
+      </div>
+    </div>
+  </center>
+
+  <script>
+    const display = document.getElementById("display");
+
+    document.getElementById("btn0").onclick = () => display.value += "0";
+    document.getElementById("btn1").onclick = () => display.value += "1";
+    document.getElementById("btn2").onclick = () => display.value += "2";
+    document.getElementById("btn3").onclick = () => display.value += "3";
+    document.getElementById("btn4").onclick = () => display.value += "4";
+    document.getElementById("btn5").onclick = () => display.value += "5";
+    document.getElementById("btn6").onclick = () => display.value += "6";
+    document.getElementById("btn7").onclick = () => display.value += "7";
+    document.getElementById("btn8").onclick = () => display.value += "8";
+    document.getElementById("btn9").onclick = () => display.value += "9";
+    document.getElementById("btnDot").onclick = () => display.value += ".";
+
+    document.getElementById("btnAdd").onclick = () => display.value += "+";
+    document.getElementById("btnSubtract").onclick = () => display.value += "-";
+    document.getElementById("btnMultiply").onclick = () => display.value += "*";
+    document.getElementById("btnDivide").onclick = () => display.value += "/";
+    document.getElementById("btnClear").onclick = () => display.value = "";
+
+    document.getElementById("btnEqual").onclick = () => {
+      try {
+        display.value = eval(display.value);
+      } catch {
+        display.value = "Error";
+      }
+    };
+  </script>
+
+
+  <style>
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    
+  </style>
+</body>
+</html>

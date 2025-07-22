@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magic Color Changer</title>
+    <style>
+        .magic-box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            border: 3px solid #333;
+            border-radius: 10px;
+            margin: 20px;
+            transition: all 0.5s ease;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="magicBox" class="magic-box"></div>
+    <button onclick="changeColor()">🎨 Change Color!</button>
+
+
+    
+    <script>
+        function changeColor() {
+            var a=document.getElementById("magicBox");
+            var l=['red','blue','black','orange','violet'];
+            var r=l[Math.floor(Math.random()*l.length)];
+            a.style.backgroundColor=r;
+        }
+    </script>
+</body>
+</html>
