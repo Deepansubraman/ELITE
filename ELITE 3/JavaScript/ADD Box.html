@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Example</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightcoral;
+      margin: 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    .highlight {
+      background-color: lightgreen;
+      border: 2px solid darkgreen;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="box" id="box1">Box 1</div>
+    <div class="box" id="box2">Box 2</div>
+  </div>
+  <button id="addBoxBtn">Add Box</button>
+  <button id="toggleHighlightBtn">Toggle Highlight on Box 1</button>
+  <button id="removeLastBoxBtn">Remove Last Box</button>
+
+  <script>
+    var a = 2;
+
+    function addBox() {
+      a++;
+      var s = document.getElementById("container");
+      var d = document.createElement("div");
+      d.className = "box";
+      d.id = "box" + a;
+      d.textContent = `Box ${a}`;
+      s.appendChild(d);
+    }
+
+    function remove() {
+      var c = document.getElementById("container");
+      if (a > 0) {
+        c.removeChild(c.lastElementChild);
+        a--;
+      } else {
+        alert("No more boxes to remove!");
+      }
+    }
+
+    document.getElementById("addBoxBtn").addEventListener("click", addBox);
+
+    document.getElementById("toggleHighlightBtn").addEventListener("click", function () {
+      var box1 = document.getElementById("box1");
+      box1.classList.toggle("highlight");
+    });
+
+
+    document.getElementById("removeLastBoxBtn").addEventListener("click", remove);
+
+   
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        addBox();
+      }
+    });
+
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Backspace" ) {
+        remove();
+      }
+    });
+  </script>
+</body>
+
+</html>
