@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spotlight Effect</title>
+    <style>
+        .spotlight {
+            padding: 20px;
+            margin: 10px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .highlighted {
+            background: linear-gradient(45deg, #ff6b6b 10%, #4ecdc4);
+            color: white;
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- make them use bootstrap for buttons -->
+    <div id="first" class="spotlight ">Click to highlight me! ✨</div>
+    <div id="second"class="spotlight ">I'm another spotlight box 🌟</div>
+    <div  id="third" class="spotlight ">Me too! Pick me! 🎭</div>
+    <button id="btn"onclick="highlightFirst()">Highlight First Box</button>
+
+
+    <script>
+
+        var i = 3;
+        function highlightFirst() {
+            let t
+            let f;
+            if (i % 3 == 0) {
+               f=document.getElementById("first");
+               t="first";
+            }
+            else if (i % 3== 1) {
+                f=document.getElementById("second");
+                t="second";
+            }
+            else {
+                 f=document.getElementById("third");
+                 t="third"; 
+            }
+            var l=document.getElementById("btn");
+            f.classList.add("highlighted");
+            l.innerHTML=`Highlight ${t} Box`;
+                setTimeout(function () {
+                    f.classList.remove("highlighted")
+                }, 2000)
+            i++;
+            
+        }
+    </script>
+</body>
+
+</html>
